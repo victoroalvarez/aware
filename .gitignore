@@ -1,0 +1,15 @@
+ macOS metadata
+.DS_Store
+.DS_Store/
+
+# VIM
+.netrwhist
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+id_*
+!id_*.pub
+.netrc
