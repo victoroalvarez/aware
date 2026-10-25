@@ -1,9 +1,23 @@
 {
     "height": 10, // Waybar height (to be removed for auto height)
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["sway/window"],
-    "modules-right": ["pulseaudio", "network", "backlight", "sway/language", "battery", "battery#bat2", "tray", "clock"],
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode"
+    ],
+    "modules-center": [
+        "sway/window"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "network",
+        "backlight",
+        "sway/language",
+        "battery",
+        "battery#bat2",
+        "tray",
+        "clock"
+    ],
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
@@ -13,11 +27,14 @@
     },
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-	"format": "{:%Y-%m-%d %OI:%M %p}"
+        "format": "{:%Y-%m-%d %OI:%M %p}"
     },
     "backlight": {
         "format": "{percent}% {icon}",
-        "format-icons": ["", ""]
+        "format-icons": [
+            "",
+            ""
+        ]
     },
     "battery": {
         "states": {
@@ -28,7 +45,13 @@
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
     },
     "battery#bat2": {
         "bat": "BAT2"
@@ -54,7 +77,11 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "", ""]
+            "default": [
+                "",
+                "",
+                ""
+            ]
         },
         "on-click": "pavucontrol"
     }
