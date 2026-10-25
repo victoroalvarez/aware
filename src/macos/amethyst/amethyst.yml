@@ -1,0 +1,264 @@
+# Amethyst configuration file.
+# * This file should be located at `~/.amethyst.yml`
+# * Restart Amethyst to register new changes. Mod + CTRL + Z
+# * When using a configuration file with Amethyst, you should first discard the configuration you set through its GUI interface on the menu bar. You can first quit Amethyst and then run `defaults delete com.amethyst.Amethyst.plist` on your terminal to delete this configuration. Now when you relaunch Amethyst it will read the configuration file.
+
+# Layouts: Chosen layouts. Uncommented layouts are activated and commented layouts are disabled. The order of the layouts determines the orden in which you switch between them.
+layouts:
+  - tall
+  - wide
+  - column
+  - 3column-left
+  - middle-wide # The legacy name of "3column-middle"
+  # fullscreen
+  # - tall-right
+  # - two-pane
+  # - middle-wide
+  # - 3column-right
+  # - 4column-left
+  # - 4column-right
+  # - row
+  # - floating
+  # - widescreen-tall
+  # - widescreen-tall-right
+  # - bsp
+
+# First mod key Shift + Option. (default is option + shift). Commented-out key names are not activated.
+mod1:
+  - option
+  - shift
+  # - control
+  # - command
+
+# Second mod key. Shift + Option + CTRL.  Commented-out key names are not activated.
+mod2:
+  - option
+  - shift
+  - control
+  # - command
+
+# Third mod key. Shift + CMD.
+mod3:
+  - shift
+  - command
+
+# Commands:
+# special key values
+# space
+# enter
+# up
+# right
+# down
+# left
+
+# special characters require quotes
+# '.'
+# ','
+
+# Move to the next layout in the chosen list.
+cycle-layout:
+  mod: mod1
+  key: space
+
+# Move to the previous layout in the chosen list.
+cycle-layout-backward:
+  mod: mod2
+  key: space
+
+# Shrink the main pane by x percentage set in "window-resize-step" setting.
+shrink-main:
+  mod: mod1
+  key: h
+
+# Expand the main pane by x percentage set in "window-resize-step" setting.
+expand-main:
+  mod: mod1
+  key: l
+
+# Increase the number of windows in the main pane. (Not all layouts will respond to this command. For example, when you have 4 windows on the "Tall" layout, it will help you place them as four rectangles on each corner of your screen.)
+increase-main:
+  mod: mod1
+  key: ','
+
+# Decrease the number of windows in the main pane. (Not all layouts will respond to this command.)
+decrease-main:
+  mod: mod1
+  key: '.'
+
+# Change window focus to the next window counter-clockwise.
+focus-ccw:
+  mod: mod1
+  key: j
+
+# Change window focus to the next window clockwise.
+focus-cw:
+  mod: mod1
+  key: k
+
+# Focus the main window in the pane.
+#focus-main:
+#  mod: mod1
+#  key: m
+
+# Focus the next Screen counter-clockwise.
+#focus-screen-ccw:
+#  mod: mod1
+#  key: p
+
+# Focus the next Screen clockwise.
+#focus-screen-cw:
+#  mod: mod1
+#  key: n
+
+# Move the currently focused window to the next screen counter-clockwise.
+#swap-screen-ccw:
+#  mod: mod2
+#  key: h
+
+# Move the currently focused window onto the next screen in the list going clockwise.
+#swap-screen-cw:
+#  mod: mod2
+#  key: l
+
+# Swap the position the focused window with the next window located counter-clockwise.
+swap-ccw:
+  mod: mod2
+  key: j
+
+# Swap the position the focused window with the next window located clockwise.
+swap-cw:
+  mod: mod2
+  key: k
+
+# Throw the focused window to the left space.
+throw-space-left:
+  mod: mod2
+  key: left
+
+# Throw the focused window to the right space.
+throw-space-right:
+  mod: mod2
+  key: right
+
+# Toggle floating state of the focused window.
+toggle-float:
+  mod: mod3
+  key: space
+
+# Display the currently selected layout on the HUD.
+display-current-layout:
+  mod: mod1
+  key: i
+
+# Toggle tiling on or off for all windows.
+# toggle-tiling:
+#  mod: mod2
+#  key: t
+
+# Turn on tiling.
+# enable-tiling:
+#   mod: mod2
+#   key: <NONE>
+
+# Turn off tiling.
+# disable-tiling:
+#   mod: mod2
+#   key: <NONE>
+
+# Rerun the currently selected layout algorithm.
+#reevaluate-windows:
+#  mod: mod1
+#  key: z
+
+# Quit and reopen Amethyst.
+relaunch-amethyst:
+  mod: mod2
+  key: z
+
+# Disable Screen padding on the mac's builtin display.
+disable-padding-on-builtin-display: true
+
+# Add margins between windows.
+window-margins: false
+
+# Set window margins even if theres only one window on the screen.
+smart-window-margins: true
+
+# Choose the size of the margins between windows (in pixels, default 0).
+window-margins: true
+window-margin-size: 0
+
+# Maximun number of windows visible on a screen at one time. All others windows will be minimized. If set to "0" disables this feature.
+window-max-count: 0
+
+# Smallest height a window may be resized to. (in pixels, default 0)
+window-minimum-height: 0
+
+# Smallest width a window may be resized to. (in pixels, default 0)
+window-minimum-width: 0
+
+# List of bundle identifiers for apps. When apps are selected here, the "floating-is-blacklist" setting sets them to float or tile while all others are set to the opposite. (default is "floating: []")
+floating: []
+
+# True sets selected apps in "floating" setting to float and all others set to tile while false sets all selected apps to tile and all others to float.
+floating-is-blacklist: true
+
+# Set to true to exclude the status bar from the screen frames or false if screen frames should include the status bar. (default false)
+ignore-menu-bar: false
+
+# Set to true to hide the menu bar icon by default. (default false)
+hide-menu-bar-icon: false
+
+# Set to true if you wish to automaticly float windows smaller than x size in pixels. The size in pixels is set below in the "small-window-size" setting.
+float-small-windows: true
+
+# Small Window Size. Sets the sizes in pixel that Amethyst considers as a small window to automaticly float.
+small-window-size: 400
+
+# Set to true if you wish to move the mouse position to the center of a window when that window is focused. This works when you change focus with your keyboard with the Meta key plus K, for example. (This is largely incompatible when using focus-follows-mouse as true.)
+mouse-follows-focus: true
+
+# Set to true to focus a window automaticly when hovering the mouse over it.
+focus-follows-mouse: false
+
+# This setting helps you swap windows between layout positions with your mouse.
+mouse-swaps-windows: true
+
+# Set to true when you wish to update the Space layout when changing the frame of a window with the mouse (resize). If set to true, when you resize the window with the mouse, the layout will change accordingly.
+mouse-resizes-windows: true
+
+# Display the chosen layout name when changing layouts.
+enables-layout-hud: true
+
+# Display the current layout when changing Spaces
+enables-layout-hud-on-space-change: true
+
+# Should you get updates to the beta versions of Amethyst?
+use-canary-build: false
+
+# Insert new windows into the first position in the layout or insert it to the last position in the layout.
+new-windows-to-main: false
+
+# Set to true to automatically move to the space where a window is thrown to.
+follow-space-thrown-windows: false
+
+# Integer percentage of screen size dimension to increment or decrement when resizing the main pane ratios (default 5, try to use 2 or 5)
+window-resize-step: 2
+
+# Padding setting that applies between windows and the left edge of the screen (px unit, default 0)
+screen-padding-left: 0
+
+# Padding setting that applies between windows and the right edge of the screen (px unit, default 0)
+screen-padding-right: 0
+
+# Padding setting that applies between windows and the top edge of the screen (px unit, default 0)
+screen-padding-top: 0
+
+# Padding setting that applies between windows and the bottom edge of the screen (px unit, default 0)
+screen-padding-bottom: 0
+
+# Set to true to maintain the layout state between each application execution (default true).
+restore-layouts-on-launch: false
+
+# Set true to display optional debug information in the layout HUD when you switch layouts (default false).
+debug-layout-info: false

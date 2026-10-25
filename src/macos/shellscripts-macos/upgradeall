@@ -1,0 +1,22 @@
+#!/bin/bash
+# Upgrade PKGSRC & Brew for macOS
+
+# Upgrade PKGSRC
+upgrade_pkgsrc() {
+  printf '\nUpgrade PKGSRC:\n';
+  sudo pkgin update && sudo pkgin upgrade;
+}
+
+# Upgrade Brew
+upgrade_brew() {
+ printf '\nUpgrade Brew:\n';
+ brew update && brew upgrade;
+}
+
+# Run all upgrades
+main() {
+ upgrade_pkgsrc && upgrade_brew
+}
+
+# Run main function
+main

@@ -1,0 +1,45 @@
+alias aria2c='aria2c -c -x 3' # Download file with 3 concurrent conections
+alias checkostype="sysctl kern.ostype"
+alias countlines='wc -l'
+alias doubleping='ping -c 10' # Ping 10 times
+alias findfile='mdfind / -name'
+alias getexternaladdress='curl -fsS https://ifconfig.me/ip; echo'
+alias getlocaladdress='ipconfig getifaddr en5'
+alias l='eza -l'
+alias la='eza -ax' # show all directories including hidden ones and sort by extension
+alias lessalias='alias | less'
+alias lesshistory='history |less'
+alias listprocesses='ps -e'
+alias listtailscale='tailscale status'
+alias ll='eza -l' # show files and their permissions
+alias lla='eza -la' # show files and their permissions
+alias lll='ll | less'
+alias ls='ls --color=auto'
+alias motd='cat /etc/motd'
+alias myexternalip='wget -qO0 ifconfig.me/ip'
+alias natawaretraceroute="sudo nmap --traceroute -Pn -p 22"
+alias readallconnections='netstat -A'
+alias readhostname="uname -n"
+alias readosname="uname -s"
+alias recordterminal='asciinema rec demo_$(date "+%Y-%m-%d_%H:%M").cast'
+alias restartskhd='skhd --restart-service'
+alias seegroups='id $(whoami)'
+alias showipaddress='ifconfig | grep inet'
+alias showweather='open https://www.nhc.noaa.gov/xgtwo/two_atl_7d0.png'
+alias shutdownstilllater='sudo shutdown +60'
+alias simpleserver='python -m http.server'
+alias sleepnow='pmset sleepnow'
+alias streamingvideo="yt-dlp --embed-subs --embed-metadata --external-downloader aria2c"
+alias tailhistory='history | tail'
+alias tmuxnewsession='tmux new -s'
+alias upgradebrew='brew update && brew upgrade'
+alias youtubearchive="yt-dlp --embed-chapters --xattrs --embed-metadata --write-subs 'bestvideo[ext=webm]+bestaudio[ext=webm]'"
+alias youtubeaudio="yt-dlp --embed-metadata --external-downloader aria2c -f 'bestaudio'"
+alias youtubeaudio="yt-dlp --embed-metadata --external-downloader aria2c -f 'bestaudio[ext=m4a]'"
+alias youtubeaudioarchive="youtube-dl --embed-metadata --external-downloader aria2c -f 'bestaudio[ext=webm]'"
+alias youtubemedium="yt-dlp --add-chapters --embed-metadata --external-downloader aria2c -f 'mediumvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
+alias youtubeogg="yt-dlp --embed-metadata --external-downloader aria2c -f 'bestaudio[ext=ogg]'"
+alias youtubeplaylist="yt-dlp --yes-playlist --add-chapters --embed-metadata --external-downloader aria2c -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
+alias youtubevideo="yt-dlp --add-chapters --embed-metadata --external-downloader aria2c -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
+alias yt-dlp='yt-dlp --embed-metadata --embed-chapters'
+alias zipstore='zip -Z store -r'

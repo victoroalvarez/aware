@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Stop script when errors are encountered and unset variables
+set -euo pipefail
+
+# Clean Brew
+clean_brew() {
+	# Clean Brew package manager
+	brew cleanup -s;
+	echo 'OK. Cleaned Brew.'
+}
+
+# Clean user cache
+clean_cache() {
+	# Remove most Cache
+	# Find out if theres a HOME and abort the script if unset or if its empty. This helps avoid deleting /Library/Caches instead of Deleting $HOME/Library/Caches
+	cache_dir="${HOME:?HOME is not set}/Library/Caches"
+
+	# Remove all cache but keep the $HOME/Library/Cache directory
+	find "$cache_dir" -mindepth 1 -maxdepth 1 -exec rm -rf -- {} +
+
+	echo "OK. Cleaned $cache_dir"
+}
+
+# Run all functions
+main() {
+	clean_brew && clean_cache
+}
+
+# Run main
+main

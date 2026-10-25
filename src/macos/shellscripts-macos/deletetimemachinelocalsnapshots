@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -euo pipefail
+
+# ask the user to confirm the deletion action
+confirm() {
+    read -r -p "$1 [y/N] " reply
+    [[ "$reply" =~ ^[Yy]$ ]]
+}
+
+# confirm deletion, if not exit
+confirm "Delete ALL local Time Machine snapshots?" || { echo "Aborted."; exit 1; }
+
+# delete timemachine snapshots
+sudo tmutil deletelocalsnapshots /
