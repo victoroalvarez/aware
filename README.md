@@ -11,7 +11,7 @@ Read and pick what you like from my configurations and shellscripts.
 * [256 Colors Cheat Sheet](https://www.ditig.com/256-colors-cheat-sheet)  
 * [A Quick and Easy Guide to tmux](https://hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/)  
 * [Colors - clrs.cc](https://clrs.cc/)
-* [Dunst - Arch Wiki](https://wiki.archlinux.org/title/Dunst) - Heres information regarding dunst and how to use it to display notifications and visualize volume changei through notifications onscreen.
+* [Dunst - Arch Wiki - Heres information regarding dunst and how to use it to display notifications and visualize volume changei through notifications onscreen.](https://wiki.archlinux.org/title/Dunst) 
 * [File Manager Functionality - Arch Wiki](https://wiki.archlinux.org/title/File_manager_functionality)
 * [How Do Zsh Configuration Files Work?](https://www.freecodecamp.org/news/how-do-zsh-configuration-files-work/)
 * [How to Change CPU Clock Speeds-Frequencies in Linux Using cpupower](https://www.reddit.com/r/IntelligentGaming2020/comments/12700uw/how_to_change_cpu_clock_speeds_frequencies_in/)
