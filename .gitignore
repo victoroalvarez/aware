@@ -6,10 +6,10 @@
 .netrwhist
 
 # Secrets
+!id_*.pub
+*.key
+*.pem
 .env
 .env.*
-*.pem
-*.key
-id_*
-!id_*.pub
 .netrc
+id_*
