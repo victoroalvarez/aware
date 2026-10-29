@@ -1,6 +1,8 @@
 #!/bin/bash
+# append
+# Append a word or string to the end of a text-file.
 
-# test for help option
+# Test for help option. If -h or --help is passed as argument, print the message and exit.
 case "$1" in
 	-h | --help)
 		echo "Take first argument and append it to the text-file passed as a second argument"
@@ -8,5 +10,5 @@ case "$1" in
 		;;
 esac
 
-# take first argument and append it to the text-file passed as a second argument
+# Take first argument and append it to the text-file passed as a second argument
 echo "$1" >> "$2"; 
